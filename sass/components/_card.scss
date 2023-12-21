@@ -1,0 +1,9 @@
+@mixin kart($b-radius, $border){
+    width: calc((100% - 3 * 2.5rem) / 4);
+    height: 370px;
+    border: $border;
+    border-radius: $b-radius;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}

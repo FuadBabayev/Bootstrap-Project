@@ -1,0 +1,233 @@
+@import '_variables';
+@import '_base';
+@import 'components/card';
+
+
+// Header Part Start 
+header {
+    background-color: $background;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+
+        &_logo_nav{
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            .header_logo{
+                a{
+                    font: $font-md;
+                    color: $background2;
+                }
+            }
+            nav{
+               ul{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                a{
+                    font: $font-sm;
+                    color: $background2;
+                    opacity: 0.7;
+                    text-transform: capitalize;
+                    transition: $time;
+                    &:hover{
+                        color: $background3;
+                        opacity: 1;
+                    }
+                }
+               }
+            }
+        }
+        .header_button{
+            .header_button_btn{
+                width: 110px;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                border: 1px solid $background2;
+                background-color: $background;
+                border-radius: 7px;
+                font: $font-sm;
+                cursor: pointer;
+                transition: $time;
+
+                &:hover{
+                    background-color: $background2;
+                    a, i{
+                        color: $white;
+                    }
+                }
+                a, i{
+                    color: $background2;
+                    transition: $time;
+                }
+                p{
+                    background-color: $background2;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 50%;
+                    color: $white;
+                    font-size: 13px;
+                    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                }
+            }
+        }
+    }
+}
+// Header Part Finish 
+
+
+// Main Part Start 
+main{
+    // First Section Start 
+    #section1{
+        background-color: $background2;
+        .section1{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            height: 300px;
+            h1{
+                color: $white;
+                text-align: center;
+                font: $font-xl;
+            }
+            p{
+                color: $text-color;
+                font: $font-md;
+            }
+        }
+    }
+    // First Section Finish
+
+
+    // Second Section Start
+    #section2{
+        background-color: $background;
+        padding: 80px 0;
+        .section2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2.5rem;
+            &_card{
+                @include kart(8px, 1px solid $text-color);
+                &_top{
+                    height: 45%;
+                    position: relative;
+                    .sale{
+                        width: 40px;
+                        height: 25px;
+                        background-color: $background3;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: $white;
+                        font-size: 12px;
+                        font-weight: 600;
+                        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                        position: absolute;
+                        top: 10px;
+                        right: 10px;
+                        border-radius: 10px;
+                    }
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                &_bottom{
+                    background-color: $background;
+                    height: 55%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 25px 0;
+
+                    .context{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 9px;
+                        h1{
+                            font: $font-lg;
+                            color: $background2;
+                            text-align: center;
+                        }
+                        .icons{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 1px;
+                            i{
+                                color: $icon-background;
+                                font-size: 14px;
+                            }
+                        }
+                        p{
+                            font: $font-sm;
+                            color: $text-color;
+                            text-align: center;
+                        }
+                    }
+                    .button{
+                        button{
+                            background-color: $background;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border: 1px solid $background2;
+                            width: 120px;
+                            height: 35px;
+                            border-radius: 5px;
+                            font: $font-sm;
+                            transition: $time;
+                            cursor: pointer;
+
+                            &:hover{
+                                background-color: $background2;
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+    // Second Section Finish
+}
+// Main Part End 
+
+
+
+// Footer Part Start 
+footer {
+    background-color: $background2;
+
+    .footer {
+        height: 15vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+            color: $white;
+            font: $font-sm;
+        }
+    }
+}
+
+// Footer Part End 
